@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator składek</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+
+</head>
+
+<body>
+    <div class="main-container">
+        <h1> Kalkulator składki ubezpieczenia</h1>
+        <div class="app-describe">
+            <div class="col-2">
+                <h2>Stawki ubezpieczenia</h2>
+                <ul>
+                    <li>
+                        100 - 1000: <b> 20 PLN</b>
+                    </li>
+                    <li>
+                        1001 - 3000: <b> 70 PLN</b>
+                    </li>
+                    <li>
+                        3001 - 6000: <b> 130 PLN</b>
+                    </li>
+                    <li>
+                        6001 - 9000: <b> 180 PLN</b>
+                    </li>
+                    <li>
+                        9001 - 10000: <b> 200 PLN</b>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2 price-mod">
+                <h2>Zniżki</h2>
+                <ul>
+                    <li>
+                        Płatność jednorazowa - 2% zniżki
+                    </li>
+                    <li>
+                        Bezszkodowe ubezpieczenie - 5% zniżki
+                    </li>
+                </ul>
+                <h2>Zwyżki</h2>
+                <ul>
+                    <li>
+                        Płatność w 4 ratach - 4% zwyżki
+                    </li>
+                    <li>
+                        Za wystąpienie szkody w okresie ubezpieczenia - 8% zwyżki
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <form>
+            <h2 class="text-center"> Oblicz swoją składkę ubezpieczenia</h2>
+            <div class="container">
+                <div class="col-2">
+                    <label for="kwota"> Podaj swoją kwotę ubezpieczenia</label>
+                    <div class="price-input">
+                        <input name="kwota" type="number" value="100" id="price-input" />
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="checkbox">
+                        <label><input type="checkbox">Bezszkodowe ubezpieczenie</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox">Szkoda w okresie ubezpieczenia</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="radiobutton">
+                <h3 class="text-center">Wybierz swoją formę płatności</h3>
+                <input type="radio" name="rates">Płatność jednorazowa
+                <input type="radio" name="rates">Płatność w dwóch ratach
+                <input type="radio" name="rates">Płatność w czterech ratach
+            </div>
+        </form>
+        <div class="result" id="result">
+        </div>
+        <button type="button" id="calc_button" disabled>Oblicz</button>
+    </div>
+</body>
+
+</html>
